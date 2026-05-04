@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VNAStudio | Enterprise Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1e293b;
+            --accent: #0ea5e9;
+            --surface: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --bg-body: #f8fafc;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+        }
+
+        /* Header Empresarial Atualizado com Logo */
+        .header {
+            background: var(--surface);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-bottom: 20px;
+            border-top: 4px solid var(--accent);
+        }
+        
+        .logo-image {
+            max-width: 150px; /* Ajuste o tamanho da sua logo aqui */
+            height: auto;
+            margin: 0 auto 15px;
+            display: block;
+        }
+
+        .title { margin: 0; font-size: 1.25rem; font-weight: 700; }
+        .subtitle { color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-top: 5px; }
+
+        /* Módulos (Central de Mídia) */
+        .section-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin: 20px 0 10px 5px; font-weight: 700; }
+        
+        .video-wrapper { position: relative; width: 100%; border-radius: 8px; overflow: hidden; background: #000; cursor: pointer; aspect-ratio: 16/9; margin-bottom: 15px; }
+        .video-thumbnail { width: 100%; height: 100%; object-fit: cover; }
+        .video-play-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3); }
+
+        /* Links (Unidades de Negócio) */
+        .module-link {
+            background: var(--surface);
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.2s;
+        }
+        .module-link:hover { border-color: var(--accent); box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .module-link i { width: 30px; color: var(--accent); }
+
+        .btn-play-enterprise {
+            background: #ef4444; color: white; justify-content: center; font-weight: 700;
+        }
+
+        /* Anúncio Empresarial Final */
+        .ad-card {
+            background: #0f172a;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .ad-btn {
+            display: block;
+            background: var(--accent);
+            color: white;
+            padding: 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 15px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <img src="https://i.ibb.co/6RmNnbhC/mnegropro-35.png" alt="VNAStudio Logo" class="logo-image">
+            <div class="title">VNAStudio</div>
+            <div class="subtitle">DJ M NEGRO | ENTERPRISE</div>
+        </div>
+
+        <div class="section-label">Central de Mídia</div>
+        <div class="video-wrapper" id="videoContainer" onclick="loadVideo()">
+            <img src="https://img.youtube.com/vi/PlTPXCcmSWs/maxresdefault.jpg" alt="Capa" class="video-thumbnail">
+            <div class="video-play-overlay"><i class="fas fa-play-circle fa-3x" style="color:white;"></i></div>
+        </div>
+
+        <div class="section-label">Unidades de Negócio</div>
+        <a href="https://youtube.com/@vidasnegra?si=lIpqfPyiEhjNTGl9" target="_blank" class="module-link"><i class="fab fa-youtube"></i> YouTube Vidas Negra</a>
+        <a href="https://www.facebook.com/profile.php?id=100088715085220" target="_blank" class="module-link"><i class="fab fa-facebook"></i> Facebook Pessoal</a>
+        <a href="https://www.instagram.com/m_negro_pro?igsh=azFhcm01aXU4dmJs" target="_blank" class="module-link"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://wa.me/244932393529" target="_blank" class="module-link"><i class="fab fa-whatsapp"></i> Atendimento WhatsApp</a>
+        <a href="https://youtube.com/playlist?list=PLa82EqZPjUzXnNxP9LRmSBMoBZAlN9PzH&si=kzo_8bWIU1cWljWk" target="_blank" class="module-link"><i class="fas fa-music"></i> Portfólio de Músicas</a>
+
+        <a href="https://youtube.com/playlist?list=PLa82EqZPjUzXbNAI0K-u_WFEWu-tcc0xX&si=QNYWq_elrUyNztOR" target="_blank" class="module-link btn-play-enterprise">
+            <i class="fas fa-play"></i> OUVIR PLAYLIST (PLAY)
+        </a>
+
+        <div class="ad-card">
+            <h3>VNA Marketing & Vendas</h3>
+            <p style="font-size: 0.85rem; opacity: 0.8;">Estratégia, publicidade e notícias para o seu negócio.</p>
+            <a href="https://www.facebook.com/share/1CnWvrxsuw/" target="_blank" class="ad-btn">Acessar Divisão de Marketing</a>
+        </div>
+    </div>
+
+    <script>
+        function loadVideo() {
+            var c = document.getElementById('videoContainer');
+            c.innerHTML = '<iframe src="https://www.youtube.com/embed/PlTPXCcmSWs?autoplay=1" allow="autoplay; encrypted-media" style="width:100%; height:100%; border:none;"></iframe>';
+        }
+    </script>
+</body>
+</html>
